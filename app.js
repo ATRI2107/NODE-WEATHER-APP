@@ -3,7 +3,7 @@ const url='http://api.weatherstack.com/current?access_key=f7075349ca9fe975d97278
 
 const options={
     url: url,
-    json: true
+    json: true   //Automatically understands that the data which is coming is json
 };
 request(options)
     .then(response=>{
