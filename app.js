@@ -3,7 +3,8 @@ const url='http://api.weatherstack.com/current?access_key=f7075349ca9fe975d97278
 
 request({url: url})
     .then(response=>{
-        console.log(response);
+        const data=JSON.parse(response);
+        console.log(data.location);
     })
     .catch(err=>{
         console.log(err);
