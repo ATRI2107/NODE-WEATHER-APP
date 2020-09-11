@@ -11,4 +11,7 @@ app.use(bodyparser.json());
 app.use(morgan('dev'));
 app.set('view engine','hbs');
 app.use(express.static(path.join(__dirname,'public')));
+
+const indexRoute=require('./routes/index');
+app.use("/",indexRoute);
 module.exports=app;
